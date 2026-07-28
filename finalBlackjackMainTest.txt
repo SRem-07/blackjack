@@ -1,0 +1,164 @@
+Test 1: Player Busts and Losing/Dealer Winning
+Input:
+Name: Sam
+Rules: No
+Wager: 100
+Actions: Hit
+Play again: No
+Leaderboard: no
+
+Expected Output:
+Dealer Hand:
+XXXXXXXXXXXX
+
+Player Hand:
+XXXXXXXXXXX
+Player Count: X
+
+Hit, Stand or Double? 
+
+-------------------------------------------------------
+
+Player Count: X	Dealer Count: X
+Bust!
+The Dealer Wins! Your balance is now: 300
+You have won 0 rounds. You have lost 2 rounds
+
+
+Actual Output
+Dealer Hand:
+8 of Hearts and ? of ?
+
+Player Hand:
+9 of Clubs, 10 of Diamonds
+Player Count: 19
+
+Hit, Stand or Double? 
+
+-------------------------------------------------------
+
+Dealer Hand:
+8 of Hearts and ? of ?
+
+Player Hand:
+9 of Clubs, 10 of Diamonds, 3 of Hearts
+Player Count: 22
+
+Player Count: 22	Dealer Count: 15
+Bust!
+The Dealer Wins! Your balance is now: 300
+You have won 0 rounds. You have lost 2 rounds
+
+Do you want to play again? (yes/no): 
+
+-------------------------------------------------------
+
+Game over! Sam's final balance: 300, highest score: 500
+Do you want see the leaderboard? (yes/no): 
+
+-------------------------------------------------------
+Test Case 1: Passed
+
+
+Test Case 2: Player Wins
+Inputs:
+Name: Sam
+Rules: No
+Wager: 100
+Actions: Hit
+Play again: No
+Leaderboard: no
+
+Expexted Output:
+Dealer Hand:
+X of X and ? of ?
+
+Player Hand:
+X of X, X of X
+Player Count: X
+
+Hit, Stand or Double? 
+-------------------------------------------------------
+
+Player Count: Dealer Count: 
+The Dealer Busts!
+You Win! Your balance is now: X
+You have won X rounds. You have lost X rounds
+
+
+Actual Output:
+Dealer Hand:
+Jack of Diamonds, 2 of Hearts, King of Spades
+Dealer Count: 22
+
+Player Hand:
+9 of Hearts, 5 of Spades, 3 of Diamonds
+Player Count: 17
+
+Player Count: 17  Dealer Count: 22
+The Dealer Busts!
+You Win! Your balance is now: 500
+You have won 1 rounds. You have lost 2 rounds
+
+-------------------------------------------------------
+
+Game over! Sam's final balance: 300, highest score: 500
+Do you want see the leaderboard? (yes/no): 
+
+-------------------------------------------------------
+Test Case 2: Passed
+
+
+Test Case 3: Player Doubling
+Input: 
+Name: Sam
+Rules: No
+Wager: 100
+Actions: Stand
+Play again: No
+Leaderboard: no
+
+Expexted Output:
+Dealer Hand:
+X of Hearts and ? of ?
+
+Player Hand:
+X of X, X of X
+Player Count: X
+
+Hit, Stand or Double? 
+
+---------------------------------------------
+Game Plays as per
+
+Test 3 passed
+
+
+Test Case 4: 2 Players Playing, LeaderBoard Showing Highscores Correctly
+Inputs:
+Names: Sam, Samuel
+Rules: No
+Leaderboard: Yes
+Playing game as per usual
+
+Expected Output:
+Game over! Samuel's final balance: 0, highest score: 500
+Do you want see the leaderboard? (yes/no): yes
+Highscores:
+       Name       Balance
+    __________    _______
+
+    {'Sam'   }      X  
+    {'Samuel'}      X  
+
+Actual Output:
+Game over! Samuel's final balance: 0, highest score: 500
+Do you want see the leaderboard? (yes/no): yes
+Highscores:
+       Name       Balance
+    __________    _______
+
+    {'Sam'   }      700  
+    {'Samuel'}      500  
+
+Test 4 passed
